@@ -102,11 +102,11 @@ st.text(classification_report(y_test_c, y_pred_c, target_names=label_encoder.cla
 st.header("📝 Formulario de predicción personalizada")
 
 with st.form("form_pred"):
-    unidades = st.number_input("Unidades Producidas", min_value=0.0, max_value=100000.0, step=1.0)
-    mp = st.number_input("Costo Materia Prima", min_value=0.0, max_value=100000.0, step=0.5)
-    mo = st.number_input("Costo Mano de Obra", min_value=0.0, max_value=100000.0, step=0.5)
-    ci = st.number_input("Costo Indirecto", min_value=0.0, max_value=100000.0, step=0.5)
-    hm = st.number_input("Horas Máquina", min_value=0.0, max_value=5000.0, step=0.5)
+    unidades = st.number_input("Unidades Producidas", min_value=0.0, max_value=1000.0, step=1.0)
+    mp = st.number_input("Costo Materia Prima", min_value=0.0, max_value=40000.0, step=0.5)
+    mo = st.number_input("Costo Mano de Obra", min_value=300.0, max_value=40000.0, step=1.0)
+    ci = st.number_input("Costo Indirecto", min_value=100.0, max_value=1000.0, step=0.5)
+    hm = st.number_input("Horas Máquina", min_value=0.0, max_value=1000.0, step=1.0)
     submit = st.form_submit_button("Predecir")
 
     if submit:
